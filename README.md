@@ -67,6 +67,7 @@ python scripts/evaluate.py --real ./data/cifar10 --fake ./results/generated
 📈 Kernel visualization tools
 ```
 📜 Citation
+```bash
 @article{xu2024deep,
   title={Deep MMD Gradient Flow},
   author={Xu, Bowen and Gretton, Arthur and Sutherland, Dan},
@@ -80,19 +81,9 @@ python scripts/evaluate.py --real ./data/cifar10 --fake ./results/generated
   journal={arXiv preprint arXiv:2306.17189},
   year={2023}
 }
-🤝 Contributing
-We welcome:
+```
 
-Bug reports via issues
-
-Feature requests
-
-Pull requests
-
-See CONTRIBUTING.md for guidelines.
-
-
-Key improvements:
+### Key improvements:
 1. Added badges for visual appeal
 2. Better organized feature lists
 3. Clearer project structure visualization
@@ -101,8 +92,3 @@ Key improvements:
 6. Better spacing and markdown formatting
 7. Added placeholder for contribution guidelines
 8. More professional results section
-
-Would you like me to:
-1. Add installation requirements details?
-2. Include sample command outputs?
-3. Create a companion CONTRIBUTING.md file? 
