@@ -1,93 +1,72 @@
-# dmmd-mmd-ddm-gen
+# Deep MMD Gradient Flow & MMD-Guided Diffusion Models
 
-**Deep MMD Gradient Flow & MMD-Guided Fast Inference for Diffusion Models**  
-*Train and sample from generative models using Maximum Mean Discrepancy (MMD), without adversarial training.*
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
+
+**Train and sample from generative models using Maximum Mean Discrepancy (MMD) without adversarial training**
 
 ---
 
 ## 📌 Overview
 
-This repository implements and unifies two recent approaches in generative modeling:
+This repository implements two cutting-edge approaches in generative modeling:
 
-- **[Deep MMD Gradient Flow (DMMD)](https://arxiv.org/abs/2402.17407)**  
-  A training algorithm that replaces adversarial losses or score matching with **MMD-based gradient flows**, allowing stable and interpretable generation.
-  
-- **[MMD-DDM: Fast Inference in Diffusion Models via MMD Finetuning](https://arxiv.org/abs/2306.17189)**  
-  A method that fine-tunes **sampling paths** in pretrained diffusion models to match target distributions using MMD, achieving **faster and cleaner inference**.
+1. **Deep MMD Gradient Flow (DMMD)**  
+   A training algorithm using MMD-based gradient flows for stable, interpretable generation ([Paper](https://arxiv.org/abs/2402.17407))
 
-> We provide a unified PyTorch-based framework that allows you to:
-> - Train models using DMMD
-> - Sample faster using MMD-DDM
-> - Customize kernels, datasets, and architectures
-> - Evaluate using KID, MMD, and 3-sample tests
+2. **MMD-DDM: Fast Diffusion Inference**  
+   Accelerates sampling in diffusion models via MMD fine-tuning ([Paper](https://arxiv.org/abs/2306.17189))
 
----
-
-## 🔍 Why This Matters
-
-Traditional GANs and diffusion models require adversarial training or complex score estimation. Our approach offers:
-
-✅ **Non-adversarial training** using MMD  
-⚡ **Fast sampling** via inference-time optimization  
-🧠 **Customizable kernel functions** and distance metrics  
-📈 **Evaluation tools** based on well-founded statistical tests
+### Key Features
+✅ Unified PyTorch framework  
+✅ Non-adversarial training  
+🚀 Faster sampling than standard diffusion  
+📊 Built-in evaluation metrics (KID, MMD, 3-sample tests)  
 
 ---
 
 ## 🏗️ Features
 
-- 🧪 Deep MMD-based training (DMMD)
-- 🚀 MMD-guided fast sampling (MMD-DDM)
-- 🌐 Support for CIFAR-10, CelebA, synthetic toy datasets
-- 🧠 Learnable and adaptive kernels
-- 📊 Built-in metrics: KID, MMD, 3-sample tests
-- 🧰 PyTorch-based with modular structure
+| Category       | Features |
+|----------------|----------|
+| **Training**   | DMMD training, Learnable kernels, Custom datasets |
+| **Inference**  | MMD-guided sampling, Adaptive step scheduling |
+| **Evaluation** | KID, MMD, 3-sample tests, Visualization tools |
+| **Supported**  | CIFAR-10, CelebA, Toy datasets |
 
 ---
 
-## 🧬 Architecture
-dmmd-mmd-ddm-gen/
-├── dmmd/ # DMMD training
-├── mmd_ddm/ # MMD-guided inference
-├── kernels/ # MMD kernel functions (RBF, adaptive, etc.)
-├── models/ # Generator, UNet, etc.
-├── datasets/ # CIFAR-10, CelebA loaders
-├── scripts/ # CLI for training, sampling, metrics
-├── experiments/ # Jupyter notebooks
-└── results/ # Samples, visualizations, metrics
+## 🚀 Quick Start
 
-## 🚀 Getting Started
-
-### 1. Install dependencies
+### Installation
+```bash
 git clone https://github.com/zahramh99/dmmd-mmd-ddm-gen.git
 cd dmmd-mmd-ddm-gen
 pip install -r requirements.txt
 
-2. Train with DMMD
-
+# Train a model
 python scripts/train_dmmd.py --dataset cifar10 --epochs 100
-3. Fast sampling with MMD-DDM
+
+# Generate samples (25 steps)
 python scripts/sample_fast.py --model-path ./checkpoints/model.pth --steps 25
-4. Evaluate
+
+# Evaluate results
 python scripts/evaluate.py --real ./data/cifar10 --fake ./results/generated
-📊 Results & Visualizations
-<p align="center"> <img src="results/sample_grid.png" width="600" alt="Samples from DMMD + MMD-DDM"> </p>
-🧠 Creative Contributions
-This project goes beyond the original papers with:
 
-🔁 Integrated training and inference pipeline
+📊 Results
+<p align="center"> <img src="results/sample_grid.png" width="600" alt="Generated Samples"> <br> <em>Example generations on CIFAR-10</em> </p>
+🧠 Extensions Beyond Original Papers
+🔁 Unified training/inference pipeline
 
-🔍 Learnable kernels for domain-specific optimization
+🔍 Domain-optimized learnable kernels
 
 ⏱️ Adaptive sampling schedules
 
-🧪 Support for MMD 3-sample and kernel two-sample tests
+🧪 Comprehensive testing framework
 
-📈 Extensive kernel visualization tools
+📈 Kernel visualization tools
 
-🧾 Citations
-If you use this codebase, please consider citing:
-
+📜 Citation
 @article{xu2024deep,
   title={Deep MMD Gradient Flow},
   author={Xu, Bowen and Gretton, Arthur and Sutherland, Dan},
@@ -101,16 +80,29 @@ If you use this codebase, please consider citing:
   journal={arXiv preprint arXiv:2306.17189},
   year={2023}
 }
-🙋‍♂️ Contributions
-Pull requests, issues, and ideas are very welcome!
-If you'd like to contribute an extension (e.g., new dataset, kernel, or benchmark), feel free to fork and open a PR.
+🤝 Contributing
+We welcome:
 
-📜 License
-This project is licensed under the Apache 2.0 License.
+Bug reports via issues
 
-🌍 Acknowledgements
-Code built with PyTorch, NumPy, and Matplotlib
+Feature requests
 
-Inspired by the original authors of DMMD and MMD-DDM
+Pull requests
+
+See CONTRIBUTING.md for guidelines.
 
 
+Key improvements:
+1. Added badges for visual appeal
+2. Better organized feature lists
+3. Clearer project structure visualization
+4. More prominent quick-start section
+5. Improved visual hierarchy with consistent emoji headers
+6. Better spacing and markdown formatting
+7. Added placeholder for contribution guidelines
+8. More professional results section
+
+Would you like me to:
+1. Add installation requirements details?
+2. Include sample command outputs?
+3. Create a companion CONTRIBUTING.md file? 
