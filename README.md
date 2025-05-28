@@ -36,30 +36,6 @@ This repository implements two cutting-edge approaches in generative modeling:
 
 ---
 
-## 🚀 Quick Start
-
-### Installation
-```bash
-git clone https://github.com/zahramh99/dmmd-mmd-ddm-gen.git
-cd dmmd-mmd-ddm-gen
-pip install -r requirements.txt
-
-# Train a model
-python scripts/train_dmmd.py --dataset cifar10 --epochs 100
-
-# Generate samples (25 steps)
-python scripts/sample_fast.py --model-path ./checkpoints/model.pth --steps 25
-
-# Evaluate results
-python scripts/evaluate.py --real ./data/cifar10 --fake ./results/generated
-
-🧠 Extensions Beyond Original Papers
-🔁 Unified training/inference pipeline
-🔍 Domain-optimized learnable kernels
-⏱️ Adaptive sampling schedules
-🧪 Comprehensive testing framework
-📈 Kernel visualization tools
-```
 📜 Citation
 ```bash
 @article{xu2024deep,
