@@ -53,17 +53,11 @@ python scripts/sample_fast.py --model-path ./checkpoints/model.pth --steps 25
 # Evaluate results
 python scripts/evaluate.py --real ./data/cifar10 --fake ./results/generated
 
-📊 Results
-<p align="center"> <img src="results/sample_grid.png" width="600" alt="Generated Samples"> <br> <em>Example generations on CIFAR-10</em> </p>
 🧠 Extensions Beyond Original Papers
 🔁 Unified training/inference pipeline
-
 🔍 Domain-optimized learnable kernels
-
 ⏱️ Adaptive sampling schedules
-
 🧪 Comprehensive testing framework
-
 📈 Kernel visualization tools
 ```
 📜 Citation
