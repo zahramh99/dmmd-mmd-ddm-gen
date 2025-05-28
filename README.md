@@ -1,6 +1,4 @@
 # dmmd-mmd-ddm-gen
-Deep MMD Gradient Flow &amp; Fast MMD-Guided Diffusion Sampling
-# 🌀 dmmd-mmd-ddm-gen
 
 **Deep MMD Gradient Flow & MMD-Guided Fast Inference for Diffusion Models**  
 *Train and sample from generative models using Maximum Mean Discrepancy (MMD), without adversarial training.*
@@ -61,7 +59,6 @@ dmmd-mmd-ddm-gen/
 ## 🚀 Getting Started
 
 ### 1. Install dependencies
-```bash
 git clone https://github.com/zahramh99/dmmd-mmd-ddm-gen.git
 cd dmmd-mmd-ddm-gen
 pip install -r requirements.txt
@@ -91,9 +88,6 @@ This project goes beyond the original papers with:
 🧾 Citations
 If you use this codebase, please consider citing:
 
-bibtex
-Copy
-Edit
 @article{xu2024deep,
   title={Deep MMD Gradient Flow},
   author={Xu, Bowen and Gretton, Arthur and Sutherland, Dan},
