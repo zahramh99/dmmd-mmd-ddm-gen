@@ -65,7 +65,7 @@ python scripts/evaluate.py --real ./data/cifar10 --fake ./results/generated
 🧪 Comprehensive testing framework
 
 📈 Kernel visualization tools
-
+```
 📜 Citation
 @article{xu2024deep,
   title={Deep MMD Gradient Flow},
