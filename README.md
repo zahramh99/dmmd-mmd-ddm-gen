@@ -53,4 +53,17 @@ This repository implements two cutting-edge approaches in generative modeling:
 }
 ```
 
+## 🚦 Current Status
+
+- **Latest Development Focus**:
+  - Optimizing memory usage for large-scale datasets
+  - Adding MNIST support
+  - Improving documentation and examples
+
+- **Planned Features**:
+  - Multi-GPU support
+  - Additional kernel options
+  - More comprehensive benchmarking
+ 
+  🚧 *This project is currently under active development. API may change and features are being added regularly.* 🚧
 
