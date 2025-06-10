@@ -65,5 +65,5 @@ This repository implements two cutting-edge approaches in generative modeling:
   - Additional kernel options
   - More comprehensive benchmarking
  
-  🚧 *This project is currently under active development. API may change and features are being added regularly.* 🚧
+  🚧 *This project is currently under active development. API may change and features are being added regularly.*
 
