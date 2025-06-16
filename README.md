@@ -12,10 +12,10 @@
 This repository implements two cutting-edge approaches in generative modeling:
 
 1. **Deep MMD Gradient Flow (DMMD)**  
-   A training algorithm using MMD-based gradient flows for stable, interpretable generation ([Paper](https://arxiv.org/abs/2402.17407))
+   A training algorithm using MMD-based gradient flows for stable, interpretable generation 
 
 2. **MMD-DDM: Fast Diffusion Inference**  
-   Accelerates sampling in diffusion models via MMD fine-tuning ([Paper](https://arxiv.org/abs/2306.17189))
+   Accelerates sampling in diffusion models via MMD fine-tuning 
 
 ### Key Features
 ✅ Unified PyTorch framework  
