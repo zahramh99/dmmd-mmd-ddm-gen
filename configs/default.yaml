@@ -1,0 +1,38 @@
+# Common config
+common:
+  device: "cuda"
+  seed: 42
+  output_dir: "outputs"
+
+# DMMD config
+dmmd:
+  z_dim: 128
+  img_size: 32
+  channels: 3
+  batch_size: 64
+  lr: 1e-4
+  beta1: 0.5
+  beta2: 0.999
+  n_iters: 50000
+  log_every: 100
+  sample_every: 1000
+  ckpt_every: 5000
+  sigmas: [0.5, 1, 2, 4, 8]
+
+# MMD-DDM config
+mmd_ddm:
+  img_size: 32
+  batch_size: 64
+  lr: 1e-5
+  beta1: 0.9
+  beta2: 0.999
+  n_iters: 10000
+  log_every: 100
+  sample_every: 500
+  ckpt_every: 1000
+  sigmas: [0.5, 1, 2, 4, 8]
+  timesteps: 1000
+  inference_steps: 10
+  beta_schedule: "cosine"
+  base_channels: 64
+  pretrained_path: "pretrained/diffusion.pt"
